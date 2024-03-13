@@ -1,11 +1,12 @@
 import { Fragment } from "react"
 import Hero from "../components/Homepage/Hero"
+import Featured from "../components/Homepage/Featured"
 
 
 
 const HomePage = () => {
     return (
-        <Fragment>
+        <Fragment >
             <Hero />
             <Featured />
         </Fragment>
