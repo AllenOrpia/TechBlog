@@ -4,8 +4,10 @@ import Link from "next/link";
 
 const PostItem = (props) => {
 
-    const { title, image, excerpt, date, slug } = props.post;
 
+
+    const { title, image, excerpt, date, slug } = props.post;
+    const linkPath = `/posts/${slug}`
     const formattedDate = new Date(date).toLocaleDateString('en-US', {
         day: 'numeric',
         month: 'long',
@@ -15,9 +17,9 @@ const PostItem = (props) => {
     const imagePath = `/images/posts/${slug}/${image}`
     return (
         <li className="">
-            <Link>
+            <Link href={linkPath}>
                 <div>
-                    <Image src={ imagePath } alt={title} width={300} height={200} />
+                    <Image src={imagePath} alt={title} width={300} height={200} layout="responsive" />
                 </div>
                 <div>
                     <h3>{title}</h3>

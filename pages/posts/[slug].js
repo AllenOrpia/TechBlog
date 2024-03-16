@@ -1,8 +1,9 @@
+import PostContent from "../../components/Posts/post-detail/PostContent"
 
 
 const SinglePostPage = () => {
   return (
-    <div>Hello Wurld!</div>
+    <PostContent />
   )
 }
 
