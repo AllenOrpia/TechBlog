@@ -1,7 +1,7 @@
 import { Fragment } from "react"
 import Hero from "../components/Homepage/Hero"
 import Featured from "../components/Homepage/Featured"
-import { getFeaturedPosts } from '../lib/posts-util'
+import { getFeaturedPosts } from '../lib/posts-util.js'
 
 
 
@@ -17,6 +17,7 @@ const HomePage = (props) => {
 
 export function getStaticProps() {
     const featuredPosts = getFeaturedPosts();
+    console.log(featuredPosts)
 
     return {
         props: {

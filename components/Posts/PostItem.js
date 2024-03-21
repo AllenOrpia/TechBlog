@@ -7,6 +7,7 @@ const PostItem = (props) => {
 
 
     const { title, image, excerpt, date, slug } = props.post;
+    
     const linkPath = `/posts/${slug}`
     const formattedDate = new Date(date).toLocaleDateString('en-US', {
         day: 'numeric',
@@ -19,7 +20,7 @@ const PostItem = (props) => {
         <li className="">
             <Link href={linkPath}>
                 <div>
-                    <Image src={imagePath} alt={title} width={300} height={200} layout="responsive" />
+                    <Image src={imagePath} alt={title} width={300} height={200}  />
                 </div>
                 <div>
                     <h3>{title}</h3>
